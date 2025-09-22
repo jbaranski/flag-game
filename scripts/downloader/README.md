@@ -25,9 +25,6 @@ npm start -- --output=./my-flags
 
 # Combined options
 npm start -- --test --output=./test-flags
-
-# Check total number of countries
-npm run count
 ```
 
 ## Output Structure
