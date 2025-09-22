@@ -1,0 +1,14 @@
+{
+  "name": "flag-downloader",
+  "version": "1.0.0",
+  "description": "Download flags from Flagpedia for all sovereign states",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "count": "node -e \"const countries = JSON.parse(require('fs').readFileSync('countries.json', 'utf8')); console.log(countries.length);\""
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "type": "module"
+}

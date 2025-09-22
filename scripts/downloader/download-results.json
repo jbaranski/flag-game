@@ -1,0 +1,122 @@
+[
+  {
+    "country": {
+      "name": "Flag of Albania",
+      "slug": "albania",
+      "url": "https://flagpedia.net/albania",
+      "code": "al"
+    },
+    "downloads": [
+      {
+        "success": true,
+        "skipped": true,
+        "url": "https://flagcdn.com/w160/al.png",
+        "path": "./flags/albania/1x.png",
+        "size": "160x107"
+      },
+      {
+        "success": true,
+        "skipped": true,
+        "url": "https://flagcdn.com/w320/al.png",
+        "path": "./flags/albania/2x.png",
+        "size": "320x214"
+      }
+    ]
+  },
+  {
+    "country": {
+      "name": "Flag of Algeria",
+      "slug": "algeria",
+      "url": "https://flagpedia.net/algeria",
+      "code": "dz"
+    },
+    "downloads": [
+      {
+        "success": true,
+        "skipped": true,
+        "url": "https://flagcdn.com/w160/dz.png",
+        "path": "./flags/algeria/1x.png",
+        "size": "160x107"
+      },
+      {
+        "success": true,
+        "skipped": true,
+        "url": "https://flagcdn.com/w320/dz.png",
+        "path": "./flags/algeria/2x.png",
+        "size": "320x214"
+      }
+    ]
+  },
+  {
+    "country": {
+      "name": "Flag of Andorra",
+      "slug": "andorra",
+      "url": "https://flagpedia.net/andorra",
+      "code": "ad"
+    },
+    "downloads": [
+      {
+        "success": true,
+        "skipped": true,
+        "url": "https://flagcdn.com/w160/ad.png",
+        "path": "./flags/andorra/1x.png",
+        "size": "160x107"
+      },
+      {
+        "success": true,
+        "skipped": true,
+        "url": "https://flagcdn.com/w320/ad.png",
+        "path": "./flags/andorra/2x.png",
+        "size": "320x214"
+      }
+    ]
+  },
+  {
+    "country": {
+      "name": "Flag of Angola",
+      "slug": "angola",
+      "url": "https://flagpedia.net/angola",
+      "code": "ao"
+    },
+    "downloads": [
+      {
+        "success": true,
+        "skipped": true,
+        "url": "https://flagcdn.com/w160/ao.png",
+        "path": "./flags/angola/1x.png",
+        "size": "160x107"
+      },
+      {
+        "success": true,
+        "skipped": true,
+        "url": "https://flagcdn.com/w320/ao.png",
+        "path": "./flags/angola/2x.png",
+        "size": "320x214"
+      }
+    ]
+  },
+  {
+    "country": {
+      "name": "Flag of Antigua and Barbuda",
+      "slug": "antigua-and-barbuda",
+      "url": "https://flagpedia.net/antigua-and-barbuda",
+      "code": "ag"
+    },
+    "downloads": [
+      {
+        "success": true,
+        "skipped": true,
+        "url": "https://flagcdn.com/w160/ag.png",
+        "path": "./flags/antigua-and-barbuda/1x.png",
+        "size": "160x107"
+      },
+      {
+        "success": true,
+        "skipped": true,
+        "url": "https://flagcdn.com/w320/ag.png",
+        "path": "./flags/antigua-and-barbuda/2x.png",
+        "size": "320x214"
+      }
+    ]
+  }
+]
