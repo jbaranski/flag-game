@@ -1,0 +1,14 @@
+{
+  "name": "flag-game",
+  "version": "1.0.0",
+  "description": "A flag guessing game using downloaded flag images",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
