@@ -1,70 +1,121 @@
 # Flag Guessing Game
 
-A web-based flag guessing game that uses the flags downloaded from the `scripts/downloader` directory.
+A web-based flag guessing game featuring all 195 sovereign state flags with smart autocomplete and automated deployment.
 
-## Features
+## ✨ Features
 
 - 🏁 **195 flags** from all sovereign states (193 UN members + Vatican + Palestine)
 - 🔍 **Smart autocomplete** with country name suggestions
 - ⌨️ **Keyboard navigation** (arrow keys, Enter, Escape)
-- 📊 **Score tracking** with detailed statistics
+- 📊 **Real-time score tracking** with detailed statistics
 - 📱 **Responsive design** that works on mobile and desktop
 - 🎯 **No repeats** until all flags have been shown
+- ⚡ **Auto-advance** after correct answers
+- 🌐 **GitHub Pages ready** with automated build system
 
-## Setup
+## 🚀 Quick Start
 
-1. **Make sure you have downloaded the flags:**
-   ```bash
-   cd scripts/downloader
-   npm start  # Downloads all flag images
-   cd ../..   # Return to flag-game directory
-   ```
+### Local Development
+```bash
+# 1. Download flag images
+cd scripts/downloader && npm start && cd ../..
 
-2. **Start the game server:**
-   ```bash
-   npm start
-   ```
+# 2. Start development server
+npm start
 
-3. **Open your browser and visit:**
-   ```
-   http://localhost:3000
-   ```
+# 3. Open http://localhost:3000
+```
 
-## How to Play
+### GitHub Pages Deployment
+```bash
+# 1. Build for deployment (auto-deploys to docs/ folder)
+cd scripts/build && npm start && cd ../..
 
-1. A random flag will be displayed
-2. Type the country name in the input field
-3. Use the autocomplete suggestions to help you
-4. Press Enter or click "Submit Guess" to check your answer
-5. Click "Skip" if you don't know the answer
-6. Click "Next Flag" to continue to the next flag
+# 2. Commit and push
+git add docs/ && git commit -m "Deploy to GitHub Pages" && git push
 
-## Game Controls
+# 3. Enable GitHub Pages from docs/ folder in repository settings
+```
 
-- **Type to search**: Autocomplete will show matching countries
-- **↑↓ Arrow keys**: Navigate autocomplete suggestions
-- **Enter**: Select highlighted suggestion or submit guess
-- **Escape**: Close autocomplete dropdown
+## 🎮 How to Play
 
-## Technical Details
+1. **View the flag** - A random flag is displayed
+2. **Type the country** - Use the smart autocomplete for suggestions
+3. **Submit your guess** - Press Enter or click Submit
+4. **Track your progress** - See your score and statistics
+5. **Keep playing** - Correct answers auto-advance to the next flag
 
-The game:
+### ⌨️ Controls
+- **Type to search** - Autocomplete shows matching countries
+- **↑↓ Arrow keys** - Navigate suggestions
+- **Enter** - Select suggestion or submit guess
+- **Escape** - Close autocomplete
+
+## 📋 Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `npm start` | Start local development server |
+
+### Build System Commands
+| Command | Description |
+|---------|-------------|
+| `cd scripts/build && npm start` | Build and deploy to docs/ folder |
+
+### Downloader Commands
+| Command | Description |
+|---------|-------------|
+| `cd scripts/downloader && npm start` | Download all flag images |
+
+## 🏗️ Project Structure
+
+```
+flag-game/
+├── 📄 index.html              # Local development version
+├── 🖥️ server.js               # Development server
+├── 📋 package.json            # Root project configuration
+├── 📁 docs/
+│   └── index.html             # GitHub Pages deployment
+└── 📁 scripts/
+    ├── downloader/            # Flag downloading system
+    │   ├── countries.json     # Country data (195 countries)
+    │   ├── flags/             # Downloaded flag images
+    │   └── package.json       # Downloader configuration
+    └── build/                 # GitHub Pages build system
+        ├── index.js           # Build script
+        └── package.json       # Build system configuration
+```
+
+## ⚙️ Technical Details
+
+### Local Version
+- Uses local flag images from `scripts/downloader/flags/`
 - Loads country data from `scripts/downloader/countries.json`
-- Displays flag images from `scripts/downloader/flags/{country-slug}/2x.png`
-- Strips "Flag of" prefix from country names for user-friendly display
-- Tracks statistics for correct, incorrect, and skipped answers
-- Prevents showing the same flag twice until all have been used
+- Requires development server to avoid CORS issues
 
-## Requirements
+### GitHub Pages Version
+- Uses external CDN for flag images (flagcdn.com)
+- Embeds country data directly in HTML
+- Works on any static hosting platform
+- Auto-generated and deployed to `docs/` folder
 
-- Node.js 18+ (for the local server)
-- Flags must be downloaded first using the downloader script
+### Build System
+The build system (`scripts/build/`) automatically:
+- ✅ Reads latest country data from `scripts/downloader/countries.json`
+- ✅ Embeds data into HTML template
+- ✅ Outputs directly to `docs/index.html`
+- ✅ Keeps root directory clean
+- ✅ Self-contained with its own package.json
 
-## Development
+## 📦 Requirements
 
-The game consists of:
-- `index.html` - Complete single-page application with HTML, CSS, and JavaScript
-- `server.js` - Simple HTTP server to serve files and avoid CORS issues
-- `package.json` - Project configuration
+- **Node.js 18+** (for development server and build system)
+- **Flag images** (download with `cd scripts/downloader && npm start`)
 
-To modify the game, edit `index.html` and restart the server.
+## 🛠️ Development
+
+To modify the game:
+1. Edit `index.html` for local changes
+2. Run `cd scripts/build && npm start` to update GitHub Pages version
+3. Test locally with `npm start`
+4. Deploy with `git add docs/ && git commit && git push`

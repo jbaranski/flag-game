@@ -1,14 +1,23 @@
 {
   "name": "flag-game",
   "version": "1.0.0",
-  "description": "A flag guessing game using downloaded flag images",
+  "description": "A flag guessing game with 195 sovereign state flags. Includes local development server and GitHub Pages deployment.",
   "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
   },
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "keywords": [
+    "flags",
+    "quiz",
+    "geography",
+    "countries",
+    "game",
+    "education"
+  ],
+  "author": "",
+  "license": "MIT"
 }
