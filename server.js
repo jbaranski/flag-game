@@ -58,7 +58,7 @@ const server = createServer(async (req, res) => {
     urlPath = '/index.html';
   }
 
-  const filePath = join(__dirname, urlPath.slice(1));
+  const filePath = join(__dirname, 'docs', urlPath.slice(1));
 
   console.log(`${new Date().toISOString()} - ${req.method} ${urlPath}`);
 

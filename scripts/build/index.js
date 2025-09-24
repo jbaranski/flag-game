@@ -436,8 +436,14 @@ const TEMPLATE = `<!DOCTYPE html>
                 this.usedFlags.add(randomIndex);
 
                 const flagImg = document.getElementById('flag');
+
+                // Detect mobile devices
+                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
                 // Use flagcdn.com for GitHub Pages compatibility
-                flagImg.src = \`https://flagcdn.com/w320/\${this.currentFlag.code}.png\`;
+                // Use smaller size (w160) for mobile devices to improve loading performance
+                const flagSize = isMobile ? 'w160' : 'w320';
+                flagImg.src = \`https://flagcdn.com/\${flagSize}/\${this.currentFlag.code}.png\`;
                 flagImg.alt = \`Flag of \${this.currentFlag.displayName}\`;
 
                 // Fallback to local flags if needed (uncomment for local deployment)
